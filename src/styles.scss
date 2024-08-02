@@ -1,3 +1,5 @@
+@import "margins";
+
 :root {
   font-size: 1em;
   box-sizing: border-box;
@@ -26,14 +28,25 @@ img {
   max-width: 100%;
 }
 
-.button {
+/* Buttons */
+.app-button {
+  width: 100%;
   padding: 0.625rem 1.25rem;
-  border: none;
   background-color: var(--primary-color);
+  border: 1px solid var(--dark-color);
+  border-radius: 0.25rem;
   color: var(--dark-color);
 
   font-size: 0.875rem;
   line-height: 1.7;
+  font-weight: 700;
+}
+
+/* Titles */
+.h1 {
+  font-size: 3rem;
+  line-height: 1.15;
+  font-weight: 800;
 }
 
 .h6 {
@@ -45,4 +58,23 @@ img {
 .subtitle {
   font-size: 0.875rem;
   line-height: 1.5e;
+}
+
+.app-control {
+  display: block;
+  font-size: 0.75rem;
+  line-height: 1.33;
+}
+
+.app-input {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid var(--light-color);
+  border-radius: 0.25rem;
+  background-color: var(--dark-color);
+  color: var(--light-color);
+
+  font-size: 0.875rem;
+  line-height: 1.5;
 }
