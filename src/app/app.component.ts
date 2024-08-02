@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import {Component, inject} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {ProfileCardComponent} from "./common-ui/profile-card/profile-card.component";
+import {ProfileService} from "./data/services/profile.service";
+import {IProfile} from "./data/interfaces/profile.intarface";
 
 @Component({
   selector: 'app-root',
@@ -10,5 +12,12 @@ import {ProfileCardComponent} from "./common-ui/profile-card/profile-card.compon
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'angular-test';
+  profileService = inject(ProfileService);
+  profiles: IProfile[] = []
+
+  constructor() {
+    this.profileService.getTestAccounts().subscribe(res => {
+      this.profiles = res;
+    });
+  }
 }
