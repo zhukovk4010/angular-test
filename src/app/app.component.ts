@@ -12,12 +12,4 @@ import {IProfile} from "./data/interfaces/profile.intarface";
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  profileService = inject(ProfileService);
-  profiles: IProfile[] = []
-
-  constructor() {
-    this.profileService.getTestAccounts().subscribe(res => {
-      this.profiles = res;
-    });
-  }
 }
