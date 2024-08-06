@@ -8,11 +8,13 @@ import {IProfile} from "../interfaces/profile.intarface";
 export class ProfileService {
   http = inject(HttpClient);
 
-  baseApiUrl = 'https://icherniakov.ru/yt-course/'
-
-  constructor() { }
+  baseApiUrl = 'https://icherniakov.ru/yt-course/';
 
   getTestAccounts() {
-    return this.http.get<IProfile[]>(`${this.baseApiUrl}account/test_accounts`)
+    return this.http.get<IProfile[]>(`${this.baseApiUrl}account/test_accounts`);
+  }
+
+  getMe() {
+    return this.http.get<IProfile>(`${this.baseApiUrl}account/me`);
   }
 }
