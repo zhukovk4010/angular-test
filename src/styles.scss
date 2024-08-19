@@ -80,3 +80,25 @@ img {
   font-size: 0.875rem;
   line-height: 1.5;
 }
+
+.password-input {
+  position: relative;
+}
+
+.password-eye-button {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  color: #FFFFFFBF;
+
+  cursor: pointer;
+
+  transition: color 0.2s ease-out;
+}
+
+.password-eye-button.active {
+  color: var(--primary-color);
+}
