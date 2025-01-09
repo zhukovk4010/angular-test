@@ -23,10 +23,19 @@ body {
   background-image: url("assets/images/app-background.png");
   color: var(--light-color);
   font-family: Arial, sans-serif;
+  line-height: 1.33;
 }
 
 img {
   max-width: 100%;
+}
+
+/* Headers */
+
+h6 {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 800;
 }
 
 /* Buttons */

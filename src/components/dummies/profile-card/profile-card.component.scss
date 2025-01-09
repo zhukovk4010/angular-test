@@ -1,0 +1,71 @@
+.profile-card {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+    padding: 2rem 1.5rem;
+    background-color: var(--dark-color);
+    border: 1px solid var(--light-color);
+    border-radius: 0.125rem;
+}
+
+.profile-card__user {
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+}
+
+.user-avatar-container {
+    width: 4.5rem;
+}
+
+.user-avatar-container img {
+    border-radius: 100%;
+}
+
+.user-name-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.user-name-container span {
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.profile-card__skills {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+}
+
+.skill {
+    padding: 0.25rem 0.5rem;
+    border: 1px solid var(--light-color);
+    border-radius: 0.125rem;
+    font-size: 0.75rem;
+    line-height: 1.33;
+    color: var(--light-color);
+}
+
+.skill--main {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.subscribe-button-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.subscribe-button {
+    padding: 10px 20px;
+    font-size: 14px;
+    line-height: 24px;
+    background-color: var(--primary-color);
+    border: 0;
+    border-radius: 2px;
+    cursor: pointer;
+}
