@@ -1,3 +1,5 @@
-<h1>Hello</h1>
-
-<app-profile-card />
+<div class="profile-cards-wrapper">
+    @for (profile of profiles; track profile.id) {
+        <app-profile-card [profile]="profile" />
+    }
+</div>

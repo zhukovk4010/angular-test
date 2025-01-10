@@ -1,16 +1,24 @@
-import {Component} from '@angular/core';
+import {Component, inject} from '@angular/core';
 import { ProfileCardComponent } from "../components/dummies/profile-card/profile-card.component";
-// import { RouterOutlet } from '@angular/router';
-// import {ProfileCardComponent} from "./common-ui/profile-card/profile-card.component";
-// import {ProfileService} from "./data/services/profile.service";
-// import {IProfile} from "./data/interfaces/profile.intarface";
+import { ProfileService } from '../services/profile.service';
+import { JsonPipe } from '@angular/common';
+import { IProfile } from '../models/api/profile.interface';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [ProfileCardComponent],
+  imports: [ProfileCardComponent , JsonPipe],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+  profileService = inject(ProfileService);
+
+  profiles: IProfile[] = []
+
+  constructor() {
+    this.profileService.getTestsAccounts().subscribe(res => {
+      this.profiles = res;
+    })
+  }
 }
