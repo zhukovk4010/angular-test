@@ -19,8 +19,12 @@
 
 body {
   margin: 0;
-  background-color: var(--dark-color);
-  background-image: url("assets/images/app-background.png");
+  background: url("assets/images/app-background.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  
   color: var(--light-color);
   font-family: Arial, sans-serif;
   line-height: 1.33;
